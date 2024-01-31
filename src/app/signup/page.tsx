@@ -84,15 +84,17 @@ export default function SignPage() {
       <button
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         onClick={onSignup}
+        disabled={buttonDisabled}
       >
-        {buttonDisabled ? ". . . . ." : "Sign up"}
+        Sign up
       </button>
-      <span>
-        already a user.
-        <Link
-        href="/login"> Sign in </Link>
+      <p>
+        Already a user.
+        <span className="text-blue-300">
+          <Link href="/login"> Sign in </Link>
+        </span>
         instead
-      </span>
+      </p>
       <span>{loading ? "loading...." : ""}</span>
     </div>
   );

@@ -35,6 +35,6 @@ const userSchema = new mongoose.Schema({
     verifiedTokenExpiry: String,
 })
 
-const User = mongoose.models.user || mongoose.model('users', userSchema)
+const User = mongoose.models.users || mongoose.model('users', userSchema);
 
 export default User

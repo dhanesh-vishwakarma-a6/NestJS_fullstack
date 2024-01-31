@@ -67,15 +67,15 @@ export default function LoginPage() {
       <button
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         onClick={onLogin}
-        disabled={loading}
+        disabled={buttonDisabled}
       >
-        {loading ? "....." : "Login"}
+        Login
       </button>
       <p>
-        <span className="text-blue">
+        <span className="text-blue-300">
           <Link href="/signup">Sign up </Link>
         </span>
-        here {user.email}
+        here
       </p>
       <span>{loading ? "loading...." : ""}</span>
     </div>
