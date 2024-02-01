@@ -12,7 +12,6 @@ export default function ProfilePage() {
 
   useEffect(() => {
     getUserDetails();
-    console.log(user)
   }, []);
 
   const getUserDetails = async () => {
@@ -34,13 +33,20 @@ export default function ProfilePage() {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <h1>Profile</h1>
       <hr />
-      <p>Welcome {}</p>
+      <p>Welcome {user === undefined ? "nothing" : <Link href={`profile/${user.username}`}>{user.username}</Link>}</p>
       <hr />
       <button
         className="bg-blue-500 mt-4 hover:bg-blue-700 text-white font bold py-2 px-2 rounded"
         onClick={onLogout}
       >
         Logout
+      </button>
+      <hr />
+      <button
+        className="bg-stone-500 mt-4 hover:bg-stone-700 text-white font bold py-2 px-2 rounded"
+        onClick={getUserDetails}
+      >
+        Get user
       </button>
     </div>
   );
