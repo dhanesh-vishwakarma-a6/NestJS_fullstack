@@ -27,7 +27,7 @@ export default function LoginPage() {
     try {
       setLoading(true);
       const response = await axios.post("/api/users/login", user);
-      console.log("Login success", response.data);
+      // console.log("Login success", response.data);
       router.push("/profile");
     } catch (error: any) {
       console.log("Login failed", error.message);
@@ -57,7 +57,7 @@ export default function LoginPage() {
       <input
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
         id="password"
-        type="text"
+        type="password"
         value={user.password}
         onChange={(e) => setUser({ ...user, password: e.target.value })}
         placeholder="password"

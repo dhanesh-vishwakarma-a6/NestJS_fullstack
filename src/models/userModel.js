@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Please provide a password']
     },
 
-    isVerfied: {
+    isVerified: {
         type: Boolean,
         default: false
     },
