@@ -8,7 +8,6 @@ export default function VerfiyEmailPage() {
   const [token, setToken] = useState("");
   const [verified, setVerified] = useState(false);
   const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState()
 
   const verifyUserEmail = async () => {
     try {
@@ -16,7 +15,6 @@ export default function VerfiyEmailPage() {
       setVerified(true);
     } catch (error: any) {
       setError(true);
-      setErrorMessage(error.response.data)
       console.log(error.response.data);
     }
   };

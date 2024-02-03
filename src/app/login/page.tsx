@@ -73,10 +73,12 @@ export default function LoginPage() {
       </button>
       <p>
         <span className="text-blue-300">
-          <Link href="/signup">Sign up </Link>
+          <Link href="/signup">Sign up here</Link>
         </span>
-        here
       </p>
+      <span className="text-blue-300">
+          <Link href="/forgotPassword">Forgot password?</Link>
+        </span>
       <span>{loading ? "loading...." : ""}</span>
     </div>
   );
