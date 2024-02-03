@@ -42,7 +42,7 @@ export default function SetPasswordPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       {/* password */}
-      <label>password </label>
+      <label>Password </label>
       <input
         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
         id="password"
@@ -65,7 +65,7 @@ export default function SetPasswordPage() {
 
       {/* login up button */}
       <button
-        className="p-2 border border-gray-300 rounded-lg mb-4 hover:green-500 focus:outline-none focus:border-gray-600"
+        className="p-2 border border-gray-300 hover:bg-green-400 rounded-lg mb-4 hover:green-500 focus:outline-none focus:border-gray-600"
         onClick={sendResetLink}
         disabled={buttonDisabled}
       >
